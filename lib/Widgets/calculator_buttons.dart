@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:calculator/Model/calc_screen.dart';
 import 'package:calculator/Providers/calc_input_provider.dart';
 import 'package:flutter/material.dart';
@@ -30,11 +32,11 @@ class _ButtonState extends State<Button> {
     CalcScreen calcScreen = CalcScreen();
     return Container(
       child: SizedBox(
-        width: 94,
-        height: 83,
+        width: 85,
+        height: Platform.isAndroid ? 70 : 80,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: widget.color,
+            backgroundColor: widget.color,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
@@ -44,7 +46,7 @@ class _ButtonState extends State<Button> {
           },
           child: Text(
             widget.buttonText,
-            style: TextStyle(color: widget.textColor, fontSize: 32),
+            style: TextStyle(color: widget.textColor, fontSize: 27),
           ),
         ),
       ),

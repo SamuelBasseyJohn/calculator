@@ -3,8 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class CalcScreen {
-  String? input;
-
   List<String> buttonText = [
     'AC',
     'DEL',
@@ -26,8 +24,4 @@ class CalcScreen {
     '.',
     '='
   ];
-
-  double compute() {
-    return 0;
-  }
 }
