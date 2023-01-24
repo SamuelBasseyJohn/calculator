@@ -35,7 +35,7 @@ class _CalculatorState extends State<Calculator> {
       setState(() {
         banner = BannerAd(
             size: AdSize.banner,
-            adUnitId: adState.bannerAdUnitId,
+            adUnitId: adState.bannerAdUnitId!,
             listener: BannerAdListener(
               onAdLoaded: (ad) => setState(() {
                 staticAdLoaded = true;
@@ -275,7 +275,7 @@ class _CalculatorState extends State<Calculator> {
                               height: 82,
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  primary: color,
+                                  backgroundColor: color,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
@@ -307,7 +307,7 @@ class _CalculatorState extends State<Calculator> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       )
                     ],

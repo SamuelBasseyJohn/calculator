@@ -6,7 +6,6 @@
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-2121562439585067~7781863775</string>
 
-
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
