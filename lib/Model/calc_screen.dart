@@ -1,13 +1,9 @@
-import 'dart:ui';
-
-import 'package:flutter/material.dart';
-
 class CalcScreen {
   List<String> buttonText = [
     'AC',
     'DEL',
     '%',
-    '/',
+    '÷',
     '7',
     '8',
     '9',

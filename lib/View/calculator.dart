@@ -269,25 +269,23 @@ class _CalculatorState extends State<Calculator> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Container(
-                            child: SizedBox(
-                              width: 188,
-                              height: 82,
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: color,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
+                          SizedBox(
+                            width: 188,
+                            height: 82,
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: color,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20),
                                 ),
-                                onPressed: () {
-                                  inputProvider.input(16);
-                                },
-                                child: Text(
-                                  numberPad.buttonText[16],
-                                  style:
-                                      TextStyle(color: textColor, fontSize: 30),
-                                ),
+                              ),
+                              onPressed: () {
+                                inputProvider.input(16);
+                              },
+                              child: Text(
+                                numberPad.buttonText[16],
+                                style:
+                                    TextStyle(color: textColor, fontSize: 30),
                               ),
                             ),
                           ),
