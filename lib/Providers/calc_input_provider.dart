@@ -12,8 +12,8 @@ class CalcInput extends ChangeNotifier {
   RegExp endSubtraction = RegExp(r'[-]$');
   RegExp multiplication = RegExp(r'\d+[x]\d+');
   RegExp endMultiplication = RegExp(r'[x]$');
-  RegExp division = RegExp(r'\d+[/]\d+');
-  RegExp endDivision = RegExp(r'[/]$');
+  RegExp division = RegExp(r'\d+[÷]\d+');
+  RegExp endDivision = RegExp(r'[÷]$');
   RegExp modulo = RegExp(r'\d+[%]\d+');
   RegExp endModulo = RegExp(r'[%]$');
 
@@ -29,6 +29,7 @@ class CalcInput extends ChangeNotifier {
 
     String finalInput = input;
     finalInput = finalInput.replaceAll('x', '*');
+    finalInput = finalInput.replaceAll('÷', '/');
     finalInput = finalInput.replaceAll('MOD', '%');
     Parser parser = Parser();
     Expression exp = parser.parse(finalInput);
